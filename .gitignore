@@ -1,0 +1,82 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.test
+.env.docker
+
+# Build output
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Prisma
+/src/generated/prisma
+prisma/generated/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+.env.docker.local
+
+# Testing
+coverage/
+.nyc_output/
+*.test.js
+*.spec.js
+test-results/
+junit.xml
+
+# Test databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Documentation (temporary/status files)
+TESTING_*.md
+DOCKER_QUICK_REFERENCE.md
+*_STATUS.md
+*_SOLUTION.md
+*_SUCCESS.md
+*_FINAL_STATUS.md
+
+# Scripts output
+*.sh.log
+
+# Mac specific
+.AppleDouble
+.LSOverride
+Icon
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build artifacts
+*.tsbuildinfo

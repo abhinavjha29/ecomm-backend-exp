@@ -1,0 +1,41 @@
+# Ignore Docker files and volumes
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+init-db.sh
+.env.docker
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Testing
+coverage/
+
+# Prisma
+prisma/migrations/
+
+# Temp files
+*.tmp
+*.temp
+.DS_Store
