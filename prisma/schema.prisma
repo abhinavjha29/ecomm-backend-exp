@@ -32,3 +32,25 @@ model users {
   created_at DateTime? @default(now()) @db.Timestamptz(6)
   updated_at DateTime? @default(now()) @db.Timestamptz(6)
 }
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model products {
+  product_id     String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name           String    @db.VarChar(150)
+  description    String?
+  price          Decimal   @db.Decimal(10, 2)
+  discount_price Decimal?  @db.Decimal(10, 2)
+  stock_quantity Int?      @default(0)
+  category       String?   @db.VarChar(100)
+  vendor_id      String?   @db.Uuid
+  brand          String?   @db.VarChar(100)
+  sku            String?   @unique @db.VarChar(50)
+  thumbnail_url  String?
+  images         String[]
+  rating         Decimal?  @db.Decimal(3, 2)
+  tags           String[]
+  meta           Json?
+  categories     String[]
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  updated_at     DateTime? @default(now()) @db.Timestamp(6)
+}
