@@ -4,6 +4,7 @@ import { API } from './utils/contants';
 import { Versions } from './utils/common.type';
 import { authRouter } from './modules/auth/auth-route';
 import { responseFormatterMiddleware } from './middleware/api-response.middleware';
+import { productRouter } from './modules/products/product-route';
 // import { UserRoutes } from "./modules/user/user.routes";
 
 const app = express();
@@ -19,4 +20,5 @@ app.get('/api/test', (_req, res) => {
   return res.json('Test completed');
 });
 app.use(`/${API}/${Versions.V1}/auth`, authRouter);
+app.use(`/${API}/${Versions.V1}/products`, productRouter);
 export default app;
